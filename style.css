@@ -11,3 +11,22 @@ body {
 h1 {
   text-align: center;
 }
+
+.player {
+  height: 500px;
+  width: 400px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: auto 0;
+}
+
+.score {
+  justify-content: flex-end;
+}
