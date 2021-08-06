@@ -1,79 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+:root {
+  --bck-color: hsl(240, 100%, 50%);
+  --card-background: hsla(50, 50%, 50%, 0.4);
+  --card-border: 2px solid hsla(50, 50%, 75%, 0.6);
+  --card-shadow: 20px 20px hsl(265, 48%, 52%);
+  --button-background: hsl(0, 100%, 50%);
+  --button-border: hsl(14, 77%, 46%);
+  --button-shadow: hsl(0, 0%, 50%);
+}
 * {
   font-family: 'Press Start 2P', cursive;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  background-color: blue;
+  background-color: var(--bck-color);
 }
 
 .title {
-  margin: 1rem;
-  font-size: 60px;
+  font-size: 4vw;
+  text-align: center;
+  margin-top: 50px;
 }
 
-h1 {
-  text-align: center;
-}
 .cards {
   display: flex;
   justify-content: space-around;
-  padding: auto 0;
 }
 
-.player-1 {
-  margin: 1rem;
-}
-
-.player-2 {
-  margin: 1rem;
-}
-
-.score {
-  margin: 1rem;
-}
-.player {
+.players-cards {
   height: 500px;
   width: 400px;
-  border: 2px solid hsla(50, 50%, 75%, 0.6);
+  border: var(--card-border);
   border-radius: 50px;
   display: grid;
-  background-color: hsla(50, 50%, 50%, 0.4);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: var(--card-background);
+  box-shadow: var(--card-shadow);
 }
 
-.cards {
-  display: flex;
-  justify-content: space-evenly;
-  padding: auto 0;
+.player {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: center;
+  justify-self: center;
+  font-size: 2vw;
+}
+
+.dice {
+  max-width: 100%;
+  border-radius: 20px 20px 20px 20px;
+  align-self: center;
+  justify-self: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 .score {
-  justify-content: flex-end;
-}
-
-div > img {
-  max-width: 75%;
-  border-radius: 20px 20px 20px 20px;
-  margin: 1rem 12.5% 1rem;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  align-self: center;
+  justify-self: center;
+  font-size: 1.5vw;
 }
 
 .buttons {
   display: grid;
   grid-auto-flow: row;
-  align-content: space-evenly;
+  align-self: center;
 }
 
 button {
   border-width: 2px;
   color: white;
-  border-color: #d0451b;
-  height: 5rem;
-  width: 15rem;
-  background-color: red;
+  border-color: var(--button-border);
+  height: 75px;
+  width: 30vw;
+  margin: 3vw;
+  background-color: var(--button-background);
   border-radius: 20px;
-  box-shadow: 10px 10px gray;
+  box-shadow: 10px 10px var(--button-shadow);
 }
