@@ -8,8 +8,13 @@
   --button-background: hsl(0, 100%, 50%);
   --button-border: hsl(14, 77%, 46%);
   --button-shadow: hsl(0, 0%, 50%);
+  --button-hover: rgb(22, 188, 44);
+  --link-color: hsl(223, 55%, 67%);
 }
+
 * {
+  margin: 0;
+  padding: 0;
   font-family: 'Press Start 2P', cursive;
   box-sizing: border-box;
 }
@@ -27,11 +32,12 @@ body {
 .cards {
   display: flex;
   justify-content: space-around;
+  margin: 5rem;
 }
 
 .players-cards {
-  height: 500px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
   border: var(--card-border);
   border-radius: 50px;
   display: grid;
@@ -53,13 +59,14 @@ body {
 
 .dice {
   max-width: 100%;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   align-self: center;
   justify-self: center;
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 4;
+  box-shadow: 10px 10px var(--button-shadow);
 }
 
 .score {
@@ -88,4 +95,35 @@ button {
   background-color: var(--button-background);
   border-radius: 20px;
   box-shadow: 10px 10px var(--button-shadow);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--card-background);
+  height: 2.5rem;
+  width: 100%;
+  padding-right: 8em;
+  padding-left: 8em;
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 1rem;
+  margin: 1%;
+  color: var(--link-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+.hidden {
+  display: none;
 }
