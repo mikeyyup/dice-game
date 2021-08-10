@@ -23,7 +23,7 @@ body {
   background-color: var(--bck-color);
 }
 
-.title {
+#title {
   font-size: 4vw;
   text-align: center;
   margin-top: 50px;
@@ -69,7 +69,7 @@ body {
   box-shadow: 10px 10px var(--button-shadow);
 }
 
-.score {
+#score1 {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row-start: 4;
@@ -79,6 +79,15 @@ body {
   font-size: 1.5vw;
 }
 
+#score2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  align-self: center;
+  justify-self: center;
+  font-size: 1.5vw;
+}
 .buttons {
   display: grid;
   grid-auto-flow: row;
