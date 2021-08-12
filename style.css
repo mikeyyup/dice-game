@@ -94,7 +94,7 @@ body {
   align-self: center;
 }
 
-button {
+.roll-reset-btn {
   border-width: 2px;
   color: white;
   border-color: var(--button-border);
@@ -137,7 +137,50 @@ button:hover {
   display: none;
 }
 
+#hidden {
+  display: none;
+}
+
 .roll,
 .reset {
   font-size: 1vw;
+}
+
+#modal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  height: 50.8vh;
+  width: 800px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -400px;
+  border: var(--card-border);
+  border-radius: 50px;
+  background-color: blueviolet;
+  box-shadow: var(--card-shadow);
+  z-index: 1;
+}
+
+#win-banner {
+  text-align: center;
+  margin: 2em;
+  font-size: 44px;
+}
+
+#play-again-btn {
+  border-width: 2px;
+  color: white;
+  border-color: var(--button-border);
+  height: 75px;
+  width: 30vw;
+  margin-top: 10%;
+  background-color: var(--button-background);
+  border-radius: 20px;
+  box-shadow: 10px 10px var(--button-shadow);
+}
+
+.blur {
+  filter: blur(3px);
 }

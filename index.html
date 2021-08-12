@@ -12,6 +12,14 @@
   
     <h1 id="title">The Dice Game</h1>
 
+<!-- MODAL WIND -->
+<div class="hidden">
+<div id="modal">
+  <h1 id="win-banner">PLAYER 1 WINS!</h1>
+  <button id="play-again-btn">Play Again?</button>
+</div>
+</div>
+
 <div class="cards">
 <!-- PLAYER 1 CARD -->
   <div class="players-cards">  
@@ -21,8 +29,8 @@
   </div>
   <!-- GAME OPTIONS -->
   <div class="buttons">
-    <button id="roll">Roll the Dice</button>
-    <button id="reset">Reset Game</button>
+    <button class="roll-reset-btn" id="roll">Roll the Dice</button>
+    <button class="roll-reset-btn" id="reset">Reset Game</button>
   </div>
   <!-- PLAYER 2 CARD -->
   <div class="players-cards">
@@ -31,6 +39,8 @@
     <h1 id="score2">Score: 4</h1>
   </div>
 </div>
+
+
 <!-- FOOTER -->
 <footer class="footer">
   <p>Created by Mikeyyup</p>

@@ -2,10 +2,14 @@
 
 const roll = document.getElementById('roll');
 const reset = document.getElementById('reset');
-let message = document.getElementById('title');
+let message = document.getElementById('win-banner');
 const score1 = document.getElementById('score1');
 const score2 = document.getElementById('score2');
 const dice = document.querySelectorAll('.dice');
+const modal = document.getElementsByTagName('div')[0];
+const playAgain = document.getElementById('play-again-btn');
+const winScreen = document.getElementsByClassName('players-cards');
+
 let playing = true;
 let currentScore1, currentScore2, gamePlay;
 
@@ -37,22 +41,34 @@ gamePlay = roll.addEventListener('click', function () {
   // GAME LOGIC
   if (score1.innerHTML >= 10 && score2.innerHTML < 10) {
     message.textContent = 'PLAYER 1 WINS!';
-    roll.classList.add('hidden');
+    document.getElementById('roll').disabled = true;
+    modal.classList.remove('hidden');
+    winScreen.classList.add('blur');
   } else if (score2.innerHTML >= 10 && score1.innerHTML < 10) {
     message.textContent = 'PLAYER 2 WINS!';
-    roll.classList.add('hidden');
+    document.getElementById('roll').disabled = true;
+    modal.classList.remove('hidden');
+    winScreen.classList.add('blur');
   } else if (score1.innerHTML >= 10 && score2.innerHTML >= 10) {
     if (score1.innerHTML > score2.innerHTML) {
       message.textContent = 'PLAYER 1 WINS!';
-      roll.classList.add('hidden');
+      document.getElementById('roll').disabled = true;
+      modal.classList.remove('hidden');
+      winScreen.classList.add('blur');
     } else if (score2.innerHTML > score1.innerHTML) {
       message.textContent = 'PLAYER 2 WINS!';
-      roll.classList.add('hidden');
-    } else {
-      console.log('no winner yet');
+      document.getElementById('roll').disabled = true;
+      modal.classList.remove('hidden');
+      winScreen.classList.add('blur');
     }
   }
 });
 
 // RESET BUTTON
 reset.addEventListener('click', init);
+
+playAgain.addEventListener('click', function () {
+  modal.classList.add('hidden');
+
+  init();
+});
