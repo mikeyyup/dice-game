@@ -129,6 +129,10 @@ a {
   text-decoration: none;
 }
 
+#play-again-btn:hover {
+  background-color: var(--button-hover);
+}
+
 button:hover {
   background-color: var(--button-hover);
 }
